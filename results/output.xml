@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.9.0 on darwin)" generated="20230409 21:00:03.103" rpa="false" schemaversion="3">
+<suite id="s1" name="Tixid" source="/Users/refqihussein/Documents/tixid">
+<suite id="s1-s1" name="Test" source="/Users/refqihussein/Documents/tixid/test">
+<suite id="s1-s1-s1" name="Feature" source="/Users/refqihussein/Documents/tixid/test/feature">
+<suite id="s1-s1-s1-s1" name="Feature" source="/Users/refqihussein/Documents/tixid/test/feature/feature.robot">
+<test id="s1-s1-s1-s1-t1" name=" Tests Open App" line="9">
+<kw name="Start Test" library="hook" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>${TIMEOUT_MAX}</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20230409 21:00:03.468" endtime="20230409 21:00:03.469"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>app=${APP_PATH}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>udid=${UDID}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230409 21:00:03.500" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230409 21:00:03.498" endtime="20230409 21:00:03.505"/>
+</kw>
+<msg timestamp="20230409 21:00:03.510" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230409 21:00:03.512" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The application at 'app/android/id.tix.android_2023-02-19.apk' does not exist or is not accessible
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The application at 'app/android/id.tix.android_2023-02-19.apk' does not exist or is not accessible
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</msg>
+<status status="FAIL" starttime="20230409 21:00:03.469" endtime="20230409 21:00:03.515"/>
+</kw>
+<status status="FAIL" starttime="20230409 21:00:03.466" endtime="20230409 21:00:03.516"/>
+</kw>
+<kw name="Finish Test" library="hook" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230409 21:00:03.523" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230409 21:00:03.522" endtime="20230409 21:00:03.525"/>
+</kw>
+<msg timestamp="20230409 21:00:03.530" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230409 21:00:03.533" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230409 21:00:03.520" endtime="20230409 21:00:03.535"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230409 21:00:03.538" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230409 21:00:03.537" endtime="20230409 21:00:03.539"/>
+</kw>
+<msg timestamp="20230409 21:00:03.574" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230409 21:00:03.576" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230409 21:00:03.536" endtime="20230409 21:00:03.578"/>
+</kw>
+<status status="FAIL" starttime="20230409 21:00:03.518" endtime="20230409 21:00:03.579">Several failures occurred:
+
+1) No application is open
+
+2) No application is open</status>
+</kw>
+<status status="FAIL" starttime="20230409 21:00:03.465" endtime="20230409 21:00:03.580">Setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The application at 'app/android/id.tix.android_2023-02-19.apk' does not exist or is not accessible
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The application at 'app/android/id.tix.android_2023-02-19.apk' does not exist or is not accessible
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)
+
+Also teardown failed:
+Several failures occurred:
+
+1) No application is open
+
+2) No application is open</status>
+</test>
+<doc>Example Feature Tests</doc>
+<status status="FAIL" starttime="20230409 21:00:03.189" endtime="20230409 21:00:03.590"/>
+</suite>
+<status status="FAIL" starttime="20230409 21:00:03.183" endtime="20230409 21:00:03.593"/>
+</suite>
+<status status="FAIL" starttime="20230409 21:00:03.175" endtime="20230409 21:00:03.595"/>
+</suite>
+<status status="FAIL" starttime="20230409 21:00:03.110" endtime="20230409 21:00:03.598"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tixid">Tixid</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">Tixid.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Feature">Tixid.Test.Feature</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Feature">Tixid.Test.Feature.Feature</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230409 21:00:03.510" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230409 21:00:03.530" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230409 21:00:03.574" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

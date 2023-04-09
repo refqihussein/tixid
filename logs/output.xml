@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.9.0 on darwin)" generated="20230409 22:47:26.931" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="/Users/refqihussein/Documents/tixid/test">
+<suite id="s1-s1" name="Feature" source="/Users/refqihussein/Documents/tixid/test/feature">
+<suite id="s1-s1-s1" name="Feature" source="/Users/refqihussein/Documents/tixid/test/feature/feature.robot">
+<test id="s1-s1-s1-t1" name="Buka Aplikasi" line="8">
+<kw name="Start Test" library="hook" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>${TIMEOUT_MAX}</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20230409 22:47:27.213" endtime="20230409 22:47:27.214"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>apps=${APP}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20230409 22:47:27.214" endtime="20230409 22:47:29.928"/>
+</kw>
+<status status="PASS" starttime="20230409 22:47:27.213" endtime="20230409 22:47:29.928"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230409 22:47:30.061" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getScreenshot (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/screenshot.js:14:10)</msg>
+<status status="FAIL" starttime="20230409 22:47:29.944" endtime="20230409 22:47:30.068"/>
+</kw>
+<msg timestamp="20230409 22:47:30.070" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getScreenshot (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/screenshot.js:14:10)</msg>
+<msg timestamp="20230409 22:47:30.071" level="FAIL">InvalidArgumentException: Message: 'platformName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'platformName' can't be blank
+    at processCapabilities (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/capabilities.js:220:13)
+    at parseCapsForInnerDriver (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/lib/utils.js:116:21)
+    at AppiumDriver.createSession (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/lib/appium.js:325:26)
+    at commandExecutor (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/driver.js:335:9)
+    at AppiumDriver.executeCommand (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/driver.js:349:15)
+    at AppiumDriver.executeCommand (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/lib/appium.js:549:26)
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:297:34)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:423:15
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at logger (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:317:13)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:224:16)
+    at done (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:322:22)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)</msg>
+<status status="FAIL" starttime="20230409 22:47:29.929" endtime="20230409 22:47:30.071"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230409 22:47:30.071" endtime="20230409 22:47:30.072"/>
+</kw>
+<kw name="Finish Test" library="hook" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230409 22:47:30.121" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getScreenshot (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/screenshot.js:14:10)</msg>
+<status status="FAIL" starttime="20230409 22:47:30.098" endtime="20230409 22:47:30.121"/>
+</kw>
+<msg timestamp="20230409 22:47:30.124" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getScreenshot (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/screenshot.js:14:10)</msg>
+<msg timestamp="20230409 22:47:30.125" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getScreenshot (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/screenshot.js:14:10)</msg>
+<status status="FAIL" starttime="20230409 22:47:30.072" endtime="20230409 22:47:30.125"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20230409 22:47:30.125" endtime="20230409 22:47:30.367"/>
+</kw>
+<status status="FAIL" starttime="20230409 22:47:30.072" endtime="20230409 22:47:30.367">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getScreenshot (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/screenshot.js:14:10)</status>
+</kw>
+<status status="FAIL" starttime="20230409 22:47:27.212" endtime="20230409 22:47:30.367">InvalidArgumentException: Message: 'platformName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'platformName' can't be blank
+    at processCapabilities (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/capabilities.js:220:13)
+    at parseCapsForInnerDriver (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/lib/utils.js:116:21)
+    at AppiumDriver.createSession (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/lib/appium.js:325:26)
+    at commandExecutor (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/driver.js:335:9)
+    at AppiumDriver.executeCommand (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/driver.js:349:15)
+    at AppiumDriver.executeCommand (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/lib/appium.js:549:26)
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol...
+    [ Message content over the limit has been removed. ]
+    at trim_prefix (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:317:13)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:335:12)
+    at next (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/express/lib/router/index.js:275:10)
+    at /Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:224:16)
+    at done (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:322:22)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+Also teardown failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getScreenshot (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/screenshot.js:14:10)</status>
+</test>
+<doc>Example Feature Tests</doc>
+<status status="FAIL" starttime="20230409 22:47:26.963" endtime="20230409 22:47:30.369"/>
+</suite>
+<status status="FAIL" starttime="20230409 22:47:26.961" endtime="20230409 22:47:30.371"/>
+</suite>
+<status status="FAIL" starttime="20230409 22:47:26.933" endtime="20230409 22:47:30.373"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Feature">Test.Feature</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Feature">Test.Feature.Feature</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230409 22:47:30.070" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getScreenshot (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/screenshot.js:14:10)</msg>
+<msg timestamp="20230409 22:47:30.124" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getScreenshot (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/screenshot.js:14:10)</msg>
+</errors>
+</robot>
